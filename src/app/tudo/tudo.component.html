@@ -1,0 +1,25 @@
+<div class="grid-container">
+<div class="header">
+<h1>To Do List</h1>
+</div>
+<div class="main">
+<div class="todos">
+    <form (submit)="addTodo()">
+        <input type="text" 
+         name="inputtodo" 
+         placeholder="Enter to do"
+         class="todo-input" 
+         [(ngModel)]="inputtodo">
+        <input type="submit" value="Add to do" class="todo-submit">
+    </form>
+    <div class="todo" *ngFor="let todo of todos; let i = index;" class="todo {{ (todo.completed? 'done':'') }}">
+        <div class="id">{{i}}</div>
+        <div class="content" (click)="toggledone(i)" >{{todo.content}}</div>
+        <button class="delete" (click)="deleteTodo(i)">Remove</button>
+    </div>
+</div>
+</div>
+<div class="footer">
+    <h3>Thank you for using todolist</h3>
+</div>
+</div>
