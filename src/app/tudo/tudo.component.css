@@ -1,7 +1,7 @@
 
 .grid-container {
 	display: grid;
-	grid-template-rows: 15% 90% 15%;
+	grid-template-rows: 14% 80% 10%;
 	grid-gap: 10px;
 	background-color: aliceblue;
 }
@@ -34,6 +34,7 @@
 	border-bottom: 1px solid #DDD;
     margin-bottom: 10px;
 	place-items: center;
+	font-size: 25px;
 }
 
 .todo:nth-child(even) {
