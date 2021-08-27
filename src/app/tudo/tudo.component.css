@@ -1,18 +1,20 @@
 
 .grid-container {
-	display: inline grid;
-	grid-template-rows: 100px 300px 100px;
+	display: grid;
+	grid-template-rows: 15% 90% 15%;
 	grid-gap: 10px;
 	background-color: aliceblue;
 }
 
 .header {
 	background-color: lightgreen;
+	place-items: center;
 }
 
 .main {
 	padding: 10px;
 	background-color: rgb(206, 171, 155);
+	margin-bottom: 10px;
 }
 
 .footer {
@@ -31,6 +33,7 @@
 	background-color: #FFF;
 	border-bottom: 1px solid #DDD;
     margin-bottom: 10px;
+	place-items: center;
 }
 
 .todo:nth-child(even) {
@@ -88,7 +91,6 @@ h1 {
 }
 
 .delete {
-    width: 14vw;
     margin: 5px auto;
 	padding: 7px 7px;
 	font-size: 15px;
