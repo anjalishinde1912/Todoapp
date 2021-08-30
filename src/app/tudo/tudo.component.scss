@@ -1,14 +1,14 @@
 
 .grid-container {
 	display: grid;
-	grid-template-rows: 14% 80% 10%;
+	grid-template-rows: 16% 80% 12%;
 	grid-gap: 10px;
 	background-color: aliceblue;
 }
 
 .header {
 	background-color: lightgreen;
-	place-items: center;
+	text-align: center;
 }
 
 .main {
@@ -32,34 +32,38 @@
 	padding: 10px 15px;
 	background-color: #FFF;
 	border-bottom: 1px solid #DDD;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 	place-items: center;
-	font-size: 25px;
+	font-size: 20px;
+	
+	:nth-child(even) {
+		background-color: #EEE;
+	}
+
+	:nth-child(odd) {
+		background-color: lightblue;
+	}
+
+	:last-of-type {
+		border-bottom: 0;
+	}
+
+	.id {
+		flex: 1 1 50px;
+		background-color: white;
+	}
+
+	.content {
+		flex: 1 1 100%;
+		background-color: white;
+	}
+
+	.done .content {
+		text-decoration: line-through;
+	}
 }
 
-.todo:nth-child(even) {
-	background-color: #EEE;
-}
 
-.todo:nth-child(odd) {
-	background-color: lightblue;
-}
-
-.todo:last-of-type {
-	border-bottom: 0;
-}
-
-.todo .id {
-	flex: 1 1 50px;
-}
-
-.todo .content {
-	flex: 1 1 100%;
-}
-
-.todo.done .content {
-	text-decoration: line-through;
-}
 
 .todo-input {
 	display: block;
@@ -86,16 +90,13 @@
     border: none;
 }
 
-h1 {
-    text-align: center;
-    font-size: 50px;
-}
-
 .delete {
     margin: 5px auto;
 	padding: 7px 7px;
 	font-size: 15px;
-    background-color: lightgreen;
-    font-size: 15px;
+    font-size: 15px;	
 }
+ 
+
+
 
